@@ -8,7 +8,7 @@ from .settings import (
     RES_DIR_NAME,
     DT_FORMAT,
     HEAD_PEP_STATUS,
-    FOOT_PEP_STATUS
+    FOOT_PEP_STATUS,
 )
 
 
