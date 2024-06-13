@@ -9,7 +9,7 @@ from .settings import (
     DT_FORMAT,
     HEAD_PEP_STATUS,
     FOOT_PEP_STATUS
-    )
+)
 
 
 class PepParsePipeline:
