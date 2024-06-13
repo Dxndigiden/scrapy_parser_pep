@@ -30,7 +30,7 @@ class PepParsePipeline:
         now_time = dt.datetime.now().strftime(DT_FORMAT)
         file_name = f'{RES_DIR_NAME}/status_summary_{now_time}.csv'
         file_path = os.path.join(BASE_DIR, file_name)
-        with open(file_path, 'w', encoding='utf-8') as f:
+        with open(file_path, mode='w', encoding='utf-8') as f:
             writer = csv.writer(
                 f, dialect=csv.unix_dialect, quoting=csv.QUOTE_MINIMAL
             )
