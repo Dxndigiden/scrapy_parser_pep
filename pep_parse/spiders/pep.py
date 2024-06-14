@@ -9,7 +9,9 @@ class PepSpider(scrapy.Spider):
 
     name = 'pep'
     allowed_domains = ['peps.python.org']
-    start_urls = ['https://peps.python.org/']
+    start_urls = [
+        f'https://{allowed_domain}/' for allowed_domain in allowed_domains
+    ]
 
     def parse(self, response):
         for pep_link in response.css('a[href^="pep"]'):

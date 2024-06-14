@@ -1,4 +1,5 @@
 import datetime as dt
+from collections import defaultdict
 import csv
 import os
 
@@ -19,11 +20,10 @@ class PepParsePipeline:
         self.statuses = {}
 
     def open_spider(self, spider):
-        pass
+        self.statuses = defaultdict(int)
 
     def process_item(self, item, spider):
-        self.statuses[item['status']] = self.statuses.get(
-            item['status'], 0) + 1
+        self.statuses[item['status']] += 1
         return item
 
     def close_spider(self, spider):
